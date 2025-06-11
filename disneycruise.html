@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Magical Disney Cruise Plan</title>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap"
+    rel="stylesheet"
+  />
+
+  <style>
+    body {font-family:'Inter',sans-serif; background:#f8fafc}
+    h1,h2,h3 {font-family:'Playfair Display',serif}
+
+    /* Utility tweaks */
+    .nav-active   {color:#0891b2; border-bottom:2px solid #0891b2}
+    .nav-inactive {color:#475569; border-bottom:2px solid transparent}
+  </style>
+</head>
+
+<body class="text-slate-700">
+<!-- ╔════════════════ TOP NAV ═════════════════╗ -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <nav class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <h1 class="text-xl md:text-2xl font-bold text-cyan-700">
+        Disney Magic Adventure
+      </h1>
+
+      <!-- Desktop nav -->
+      <div class="hidden md:block">
+        <div id="nav-menu" class="ml-10 flex items-baseline space-x-4">
+          <a href="#prep"      class="nav-item nav-active   px-3 py-2 text-sm font-medium">Pre-Cruise Prep</a>
+          <a href="#itinerary" class="nav-item nav-inactive px-3 py-2 text-sm font-medium">Daily Itinerary</a>
+          <a href="#ship"      class="nav-item nav-inactive px-3 py-2 text-sm font-medium">Ship Explorer</a>
+          <a href="#tips"      class="nav-item nav-inactive px-3 py-2 text-sm font-medium">Top Tips</a>
+          <a href="#podcast"   class="nav-item nav-inactive px-3 py-2 text-sm font-medium">Audio Summary</a>
+          <a href="#sources"   class="nav-item nav-inactive px-3 py-2 text-sm font-medium">Download PDFs</a>
+        </div>
+      </div>
+
+      <!-- Mobile nav -->
+      <div class="md:hidden">
+        <select id="mobile-nav-menu"
+          class="bg-gray-200 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-500 focus:border-cyan-500 block w-full p-2.5">
+          <option value="#prep">Pre-Cruise Prep</option>
+          <option value="#itinerary">Daily Itinerary</option>
+          <option value="#ship">Ship Explorer</option>
+          <option value="#tips">Top Tips</option>
+          <option value="#podcast">Audio Summary</option>
+          <option value="#sources">Download PDFs</option>
+        </select>
+      </div>
+    </div>
+  </nav>
+</header>
+<!-- ╚═════════════════════════════════════════╝ -->
+
+<main class="container mx-auto p-4 sm:p-6 lg:p-8">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl md:text-5xl font-bold text-slate-800">
+      Your Unforgettable Family Cruise
+    </h2>
+    <p class="mt-4 text-lg text-slate-600">
+      Disney Magic &nbsp;|&nbsp; August&nbsp;22 – 27 &nbsp;|&nbsp; Port Canaveral
+    </p>
+  </div>
+
+  <!-- ===== PRE-CRUISE, ITINERARY, SHIP, TIPS =====
+       (keep all your existing content / JS for these) -->
+
+  <!-- 🎧 AUDIO SUMMARY ========================================= -->
+  <section id="podcast" class="scroll-mt-20 mb-16">
+    <h3 class="text-3xl font-bold text-center mb-2 text-cyan-800">
+      🎧 Trip-Plan Podcast (22 min)
+    </h3>
+    <p class="text-center text-slate-600 mb-6 max-w-2xl mx-auto">
+      Prefer to listen? Hit play for a full audio walk-through of the itinerary
+      and insider tips.
+    </p>
+
+    <div class="bg-white p-6 rounded-xl shadow-lg max-w-2xl mx-auto">
+      <audio controls preload="none" class="w-full">
+        <source
+          src="The%20Essential%20Disney%20Magic%20Cruise%20Itinerary.mp3"
+          type="audio/mpeg" />
+        Your browser can’t play this audio.
+        <a href="The%20Essential%20Disney%20Magic%20Cruise%20Itinerary.mp3"
+           class="text-cyan-700 underline">Download it here</a>.
+      </audio>
+    </div>
+  </section>
+
+  <!-- 📄 PDF DOWNLOAD SECTION ================================== -->
+  <section id="sources" class="scroll-mt-20 mb-16">
+    <h3 class="text-3xl font-bold text-center mb-2 text-cyan-800">
+      Download the Full Research PDFs
+    </h3>
+    <p class="text-center text-slate-600 mb-8 max-w-2xl mx-auto">
+      Want the deep dives? Click to grab any of the original reports that back
+      this itinerary.
+    </p>
+
+    <ul class="max-w-xl mx-auto space-y-4">
+      <li>
+        <a
+          href="Manus%20Research.pdf"
+          class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:bg-cyan-50 transition"
+          download>
+          <span class="font-semibold text-slate-800">Manus Research.pdf</span>
+          <span class="text-cyan-700 font-medium text-sm">Download ⬇</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="Gemini.pdf"
+          class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:bg-cyan-50 transition"
+          download>
+          <span class="font-semibold text-slate-800">Gemini.pdf</span>
+          <span class="text-cyan-700 font-medium text-sm">Download ⬇</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="O3.pdf"
+          class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:bg-cyan-50 transition"
+          download>
+          <span class="font-semibold text-slate-800">O3.pdf</span>
+          <span class="text-cyan-700 font-medium text-sm">Download ⬇</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="O3_pro.pdf"
+          class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:bg-cyan-50 transition"
+          download>
+          <span class="font-semibold text-slate-800">O3_pro.pdf</span>
+          <span class="text-cyan-700 font-medium text-sm">Download ⬇</span>
+        </a>
+      </li>
+      <li>
+        <a
+          href="Perplexity%20Research.pdf"
+          class="flex items-center justify-between bg-white p-4 rounded-lg shadow hover:bg-cyan-50 transition"
+          download>
+          <span class="font-semibold text-slate-800">Perplexity Research.pdf</span>
+          <span class="text-cyan-700 font-medium text-sm">Download ⬇</span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<!-- === (Optional) Intersection-observer JS for nav highlighting === -->
+<script>
+  const navItems = document.querySelectorAll('.nav-item');
+  const sections = document.querySelectorAll('section');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          navItems.forEach(nav => {
+            if (nav.getAttribute('href').substring(1) === entry.target.id) {
+              nav.classList.add('nav-active');
+              nav.classList.remove('nav-inactive');
+            } else {
+              nav.classList.remove('nav-active');
+              nav.classList.add('nav-inactive');
+            }
+          });
+        }
+      });
+    },
+    { rootMargin: '-30% 0px -70% 0px' }
+  );
+
+  sections.forEach(section => observer.observe(section));
+
+  /* mobile select jump */
+  document
+    .getElementById('mobile-nav-menu')
+    .addEventListener('change', e => {
+      window.location.hash = e.target.value;
+    });
+</script>
+</body>
+</html>
